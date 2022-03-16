@@ -13,4 +13,4 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 # command to run on container start
-CMD ["jupyter", "notebook", "--port=8888", "--no-browser", "--allow-root", "--ip=0.0.0.0"]ls
+CMD ["jupyter", "notebook", "--port=8888", "--no-browser", "--allow-root", "--ip=0.0.0.0"]
