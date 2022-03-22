@@ -8,13 +8,13 @@ services:
   prometheus:
     image: prom/prometheus:v2.20.0
     container_name: prometheus
-    volumes: 
-      - ./prometheus:/etc/prometheus
-      - prometheus_data:/prometheus
-    command: 
-      - '--config.file=/etc/prometheus/prometheus.yml'
-      - '--storage.tsdb.path=prometheus_data'
-      - '--storage.tsdb.retention.time=48h'
+    volumes:
+    - ./prometheus:/etc/prometheus # host path: container path where the volume is mounted
+    - prometheus_data:/prometheus
+    command:
+    - '--config.file=/etc/prometheus/prometheus.yml'
+    - '--storage.tsdb.path=/prometheus'
+    - '--storage.tsdb.retention.time=200h'
     restart: unless-stopped
-    ports: ["9090:9090"]
+    #ports: ["9090:9090"]
   
