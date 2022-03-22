@@ -1,4 +1,5 @@
-fastapi
-uvicorn
-joblib
-sklearn
+fastapi==0.75.0
+uvicorn==0.17.6
+joblib==1.1.0
+sklearn==0.0
+prometheus_client==0.13.1
