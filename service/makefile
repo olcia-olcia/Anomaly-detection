@@ -1,5 +1,5 @@
 run:
-	docker run -p 8000:8000 olcia/lp-service
+	docker run -p 8000:8080 olcia/lp-service
 build:
 	docker build -t olcia/lp-service . 
 inspect:
